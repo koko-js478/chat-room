@@ -1,7 +1,7 @@
-# Welcome to Chat Rooms Rails 6 by TANHONGIT
+# Chat Room
 Complete the chat room application implementation using Ruby on Rails 6 and WebSockets.
 
-# What are WebSockets
+# What are WebSockets?
 WebSocket is actually a protocol that enables bidirectional communication between the client and the server of a web application over a single long living TCP connection.
 
 # Building the application
@@ -10,7 +10,7 @@ We are going to build the web application using:
 - Ruby: version ruby 2.7.1
 - Rails: version 6.0.3.2
 
-# DEMO Chat Room Application
+# Demo app
 ![Image](https://media.giphy.com/media/U4FeYRecUZls67UEXv/giphy.gif)
 
 # Runing
@@ -18,8 +18,8 @@ We are going to build the web application using:
 ### 1. Clone Repo
 
 ```
-$ git clone https://github.com/TanHongIT/chat_room_rails_6
-$ cd chat_room_rails_6
+$ git clone https://github.com/softengineer123/chat-room
+$ cd chat-room
 ```
 
 ### 2. Bundle Install 
@@ -45,29 +45,29 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: chat_room_rails_6
+  username: chat_room
   password: 1234
   host: localhost
 
 # tutorial for ubuntu linux:
 # sudo -u postgres psql
-# create user "chat_room_rails_6" with password '1234';  
-# create database "chat_room_rails_6" owner "chat_room_rails_6"; 
+# create user "chat_room" with password '1234';  
+# create database "chat_room" owner "chat_room"; 
 
 development:
   <<: *default
-  database: chat_room_rails_6
+  database: chat_room
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: chat_room_rails_6_test
+  database: chat_room_test
 
 production:
   <<: *default
-  database: chat_room_rails_6_production
+  database: chat_room_production
 ```
 
 You must change the username, password and database name accordingly!
@@ -113,8 +113,6 @@ $ rails s
 ```
 
 And now go to  http://localhost:3000/
-
-_**Read more:**_ Chat Room Realtime App With Deno : https://github.com/TanHongIT/Deno-Realtime-Chat-App
 
 <p align="center">
      <img src="https://img.shields.io/packagist/l/doctrine/orm.svg" data-origin="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="license">
